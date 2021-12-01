@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @friend.first_name %> <%= @friend.last_name %></h5>
+    <p class="card-text">
+      <p>
+        <strong>First name:</strong>
+        <%= @friend.first_name %>
+      </p>
+
+      <p>
+        <strong>Last name:</strong>
+        <%= @friend.last_name %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= @friend.email %>
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <%= @friend.phone %>
+      </p>
+
+      <p>
+        <strong>Twitter:</strong>
+        <%= @friend.twitter %>
+      </p>
+    </p>
+
+  </div>
+</div>
+<br/>
+<%= link_to 'Edit', edit_friend_path(@friend), class:' btn btn-primary' %>
+<%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' } , class:' btn btn-danger'%>
+<%= link_to 'Back', friends_path, class:' btn btn-primary' %>
