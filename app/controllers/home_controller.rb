@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   def about
 
-    @about_me = "My name is daniel"
+    @about_me = "Page view every user can see" 
     @answer = 2+2
 
   end
